@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html> <lang="es-ES"> 
+<head> <title>pagina web</title>
+<meta charset="utf-8">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+</head>
+<style>
+
+body {
+  background-color:white;
+  background-image: url("");
+}
+h{margin-right:36% }
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar-collapse li ul {
+				display:none;
+				position:absolute;
+				min-width:140px;
+			}
+			
+.navbar-collapse li:hover > ul {
+				display:block;
+			}
+			
+.navbar-collapse li ul li {
+				position:relative;
+			}
+			
+.navbar-collapse li ul li ul {
+				right:-140px;
+				top:0px;
+			}
+.banner{
+	position: relative;
+	width: 100%;
+	height: calc(320px);
+	background-color: #F5F5F5;
+	background-size: cover;
+	background-position: center;
+	transition: all .1s ease-out;
+	background-image: url('https://mejorconsalud.as.com/wp-content/uploads/2019/02/hacer-bolsas-tela-mercado.jpg');
+	animation: banner 20s infinite linear;
+}
+.banner-content{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	color: #FFF;
+	background-color: rgba(0, 22, 40, .6);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.banner-content h1{
+	margin: 0;
+	padding: 0;
+	padding-bottom: 30px;
+	font-size: 40px;
+	text-align: center;
+}
+.banner-content a{
+	text-decoration: none;
+	color: #FFF;
+	padding: 9px 20px;
+	border: 1px solid #FFF;
+	text-transform: uppercase;
+	transition: all .3s ease-in-out;
+}
+.banner-content a:hover{
+	background-color: #fff;
+	color: #333;
+}
+@keyframes banner{
+	0%{
+		background-image: url('https://mejorconsalud.as.com/wp-content/uploads/2019/02/hacer-bolsas-tela-mercado.jpg');
+	}
+	25%{
+		background-image: url('https://mejorconsalud.as.com/wp-content/uploads/2019/02/hacer-bolsas-tela-mercado.jpg');
+	}
+	26%{
+		background-image: url('https://okdiario.com/img/2019/07/28/como-hacer-una-bolsa-de-tela-con-una-camiseta-vieja.jpg');
+	}
+	50%{
+		background-image: url('https://okdiario.com/img/2019/07/28/como-hacer-una-bolsa-de-tela-con-una-camiseta-vieja.jpg');
+	}
+	51%{
+		background-image: url('https://c.files.bbci.co.uk/18202/production/_109281889_gettyimages-1135306444.jpg');
+	}
+	75%{
+		background-image: url('https://c.files.bbci.co.uk/18202/production/_109281889_gettyimages-1135306444.jpg');
+	}
+	76%{
+		background-image: url('https://okdiario.com/img/2019/07/28/como-hacer-una-bolsa-de-tela-con-una-camiseta-vieja.jpg');
+	}
+	100%{
+		background-image: url('https://okdiario.com/img/2019/07/28/como-hacer-una-bolsa-de-tela-con-una-camiseta-vieja.jpg');
+	}
+
+}
+.avatar{
+
+ background-image: url("https://cdn-ec.niceshops.com/upload/image/product/large/default/ecco-verde-bolsa-de-tela-organica-fair-trade-785329-es.jpg")
+background-position:center;
+
+ }
+  .titulo {
+    color: black;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 60px;
+	
+}
+ .contenedor {
+    padding: 60px 0;
+    width: 100%;
+    max-width: 1500px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.portafolio{
+    background:#FAF7EF;
+	padding: 20px;
+	
+}
+
+.galeria-port{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.imagen-port{
+    width: 24%;
+	 height: 400px;
+    margin-bottom: 40px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+}
+
+.imagen-port > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+
+.hover-galeria{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transform: scale(0);
+    background: hsla(43,91%,20%, 0.5);
+    transition: transform .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hover-galeria img{
+    width: 50px;
+}
+
+.hover-galeria p{
+    color: #fff;
+}
+
+.imagen-port:hover .hover-galeria{
+    transform: scale(1);
+	
+
+footer{
+    background: #414141;
+    padding: 60px 0 30px 0;
+    margin: auto;
+    overflow: hidden;
+}
+
+.contenedor-footer{
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly;
+    margin: auto;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #ccc;
+}
+
+.content-foo{
+    text-align: center;
+}
+
+.content-foo h4{
+    color: #fff;
+    border-bottom: 3px solid #af20d3;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.content-foo p{
+    color: #ccc;
+}
+
+.titulo-final{
+    text-align: center;
+    font-size: 24px;
+    margin: 20px 0 0 0;
+    color: #9e9797;
+}
+</style>
+
+<body>
+
+
+<!--MENU-->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light ">
+<div class="container-fluid"><right>
+<a class="navbar-brand" href="file:///C:/Users/Berna%20Su%C3%A1rez/Desktop/PG.html"><f><img src="https://image.flaticon.com/icons/png/128/315/315306.png"&quot; width="30" height="30"></f><strong><font face=”monaco" size=5 style="color: #81603c ">Milieu-Shop</font></strong></a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button></right>
+<h>
+<div  class="collapse navbar-collapse" id="navbarNavDropdown">	
+<ul class="navbar-nav">
+<li class="nav-item">		
+<a class="nav-link "   aria-current="page" href="file:///C:/Users/Berna%20Su%C3%A1rez/Desktop/PG.html"><font size=3>Inicio</font></a>
+</li>	
+<li class="nav-item">
+<a class="nav-link" href="file:///C:/Users/Berna%20Su%C3%A1rez/Desktop/SOBRE%20NOSOTR0.html">Sobre Nosotros</a>
+</li>		
+<li class="nav-item">
+<a class="nav-link" href="file:///C:/Users/Berna%20Su%C3%A1rez/Desktop/acerca%20de.html">Ayuda</a>
+</li>
+<li class="nav-item dropdown">
+<a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+Productos</a>
+<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+<li><a class="dropdown-item" href="file:///C:/Users/Berna%20Su%C3%A1rez/Desktop/PRODUCTOS.html">Bolsas de tela</a></li>
+<li><a class="dropdown-item" href="file:///C:/Users/Berna%20Su%C3%A1rez/Desktop/bolsanegra.html">Bolsas de tela N</a></li>
+
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</h>
+</nav>
+
+<!--BANEER-->
+
+<section class="banner">
+		<div class="banner-content">
+			<h1>Productos 100% reciclados, porque Reciclar es la Moda</h1>
+			<a href="file:///C:/Users/Berna%20Su%C3%A1rez/Desktop/SOBRE%20NOSOTR0.html">Sobre Nosotros</a>	
+		</div>
+	</section>
+	
+<!--PRODUCTOS-->
+
+	 <section class="portafolio">
+            <div class="contenedor">
+                <h1 class="titulo">-  MILLEU-SHOP Bolsas de tela  -</h1>
+                <div class="galeria-port">
+                    <div class="imagen-port">
+                        <img src="https://srv.latostadora.com/designall.dll/colibri_prisma_bolso--i:13562317286800135623211;h:320;s:B_D1;k:cadf611e16b78ec203c618a17b05922f;p:1.jpg">
+                        <div class="hover-galeria">
+                            <img src="https://image.flaticon.com/icons/png/128/2922/2922885.png" alt="">
+                            <p>bolsa 12'95€</p>
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="https://srv.latostadora.com/designall.dll/tiempo_de_amapolas--i:13562317069420135623211;h:320;s:B_D1;k:e236ff502e624dc93abb8be53f43f238;p:1.jpg" alt="">
+                         <div class="hover-galeria">
+                            <img src="https://image.flaticon.com/icons/png/128/2922/2922885.png" alt="">
+                            <p>bolsa 13'95€</p>
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="https://srv.latostadora.com/designall.dll/sushi_surfer--i:13562319970810135623211;h:320;s:B_D1;k:3779a95cd7898f04181ba5aa84001567;p:1.jpg" alt="">
+                         <div class="hover-galeria">
+                            <img src="https://image.flaticon.com/icons/png/128/2922/2922885.png" alt="">
+                            <p>bolsa 13'95€</p>
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="https://srv.latostadora.com/designall.dll/rasgado_bandera_gay_lgtbi--i:13562319098530135623211;h:320;s:B_D1;k:8cb802c7ed7cda524cf93f497b4f1390;p:1.jpg" alt="">
+                         <div class="hover-galeria">
+                            <img src="https://image.flaticon.com/icons/png/128/2922/2922885.png" alt="">
+                            <p>bolsa 12'95€</p>
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="https://srv.latostadora.com/designall.dll/bolsa_de_tela_i_am_a_teacher--i:13562327269010135623211;h:320;s:B_D1;k:b5239f8c55dd7de62450136ae976495f;p:1.jpg" alt="">
+                        <div class="hover-galeria">
+                            <img src="https://image.flaticon.com/icons/png/128/2922/2922885.png" alt="">
+                            <p>bolsa 14'95€</p>
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="https://srv.latostadora.com/designall.dll/kindest_surprise--i:13562330203460135623211;h:320;s:B_D1;k:187f564618d7cf8982469997683cdaf2;p:1.jpg" alt="">
+                        <div class="hover-galeria">
+                            <img src="https://image.flaticon.com/icons/png/128/2922/2922885.png" alt="">
+                            <p>bolsa 12'95€</p>
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="https://srv.latostadora.com/designall.dll/kalopsia--i:13562330299210135623211;h:320;s:B_D1;k:587aa62f101414df7386a5208213082b;p:1.jpg" alt="">
+                        <div class="hover-galeria">
+                            <img src="https://image.flaticon.com/icons/png/128/2922/2922885.png" alt="">
+                            <p>bolsa 14'95€</p>
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="https://srv.latostadora.com/designall.dll/da_igual_abuela--i:13562332089350135623211;h:320;s:B_D1;k:e22b7461c9eb7e2e37b9d9a1bd862e89;p:1.jpg" alt="">
+                        <div class="hover-galeria">
+                            <img src="https://image.flaticon.com/icons/png/128/2922/2922885.png" alt="">
+                            <p>bolsa 15'95€</p>
+                        </div>
+                 </div>
+                    <div class="imagen-port">
+                        <img src="https://srv.latostadora.com/designall.dll/bolsa_de_tela_-_aun_no_tengo_las_notas--i:13562332033370135623211;h:320;s:B_D1;k:3827b1c7aa7768e5089300e7ca075d31;p:1.jpg">
+                        <div class="hover-galeria">
+                            <img src="https://image.flaticon.com/icons/png/128/2922/2922885.png" alt="">
+                            <p>bolsa 13'95€</p>
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="https://srv.latostadora.com/designall.dll/bolsa_cccp--i:1356232065520135623211;h:320;s:B_D1;k:697526b20f9248a649a92de57c58ce93;p:1.jpg" alt="">
+                         <div class="hover-galeria">
+                            <img src="https://image.flaticon.com/icons/png/128/2922/2922885.png" alt="">
+                            <p>bolsa 15'95€</p>
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="https://srv.latostadora.com/designall.dll/bolsa_marx_engels_lenin_negro--i:1356232065510135623211;h:320;s:B_D1;k:6d3afed69e716e9a4e2e9cb9c6ebb52e;p:1.jpg" alt="">
+                         <div class="hover-galeria">
+                            <img src="https://image.flaticon.com/icons/png/128/2922/2922885.png" alt="">
+                            <p>bolsa 12'95€</p>
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="https://srv.latostadora.com/designall.dll/panda--i:1356232068980135623211;h:320;s:B_D1;k:c5634a117dcde78154924ef5acf5f838;p:1.jpg" alt="">
+                         <div class="hover-galeria">
+                            <img src="https://image.flaticon.com/icons/png/128/2922/2922885.png" alt="">
+                            <p>bolsa 12'95€</p>
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="https://srv.latostadora.com/designall.dll/las_emociones_de_chuck_norris--i:1356232069010135623211;h:320;s:B_D1;k:8d0b6d79c3a692c97d22a120dc11e502;p:1.jpg" alt="">
+                        <div class="hover-galeria">
+                            <img src="https://image.flaticon.com/icons/png/128/2922/2922885.png" alt="">
+                            <p>bolsa 15'95€</p>
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="https://srv.latostadora.com/designall.dll/el_deporte_es_lo_peor_que_hay_para_el_tabaco__setaloca--i:1356232070340135623211;h:320;s:B_D1;k:277a2127f86e2ceae85b7cf08c452a3a;p:1.jpg" alt="">
+                        <div class="hover-galeria">
+                            <img src="https://image.flaticon.com/icons/png/128/2922/2922885.png" alt="">
+                            <p>bolsa 12'95€</p>
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="https://srv.latostadora.com/designall.dll/fuck_yea--i:1356232068990135623211;h:320;s:B_D1;k:263b1321d9577554ad7e71d4b0bd7279;p:1.jpg" alt="">
+                        <div class="hover-galeria">
+                            <img src="https://image.flaticon.com/icons/png/128/2922/2922885.png" alt="">
+                            <p>bolsa 13'95€</p>
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="https://srv.latostadora.com/designall.dll/emoticono_feliz--i:1356232071440135623211;h:320;s:B_D1;k:0a3c8038d66a1e2fc8707b930c1d7880;p:1.jpg" alt="">
+                        <div class="hover-galeria">
+                            <img src="https://image.flaticon.com/icons/png/128/2922/2922885.png" alt="">
+                            <p>bolsa 12'95€</p>
+                        </div>
+                    </div>
+			   </div>
+            </div>
+        </section>
+<!--PIE-->
+<style>
+footer{
+    background: white;
+    padding: 60px 0 30px 0;
+    margin: auto;
+    overflow: hidden;
+}
+
+.contenedor-footer{
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly;
+    margin: auto;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #ccc;
+}
+
+.content-foo{
+    text-align: center;
+}
+
+.content-foo h4{
+    color: ;
+    border-bottom: 3px solid #81603c;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.content-foo p{
+    color: #ccc;
+}
+
+.titulo-final{
+    text-align: center;
+    font-size: 24px;
+    margin: 20px 0 0 0;
+    color: #9e9797;
+}
+</style>
+<footer>
+  <div class="contenedor-footer">
+ <div class="content-foo">
+ <h4>Teléfono</h4>
+<p>654327900</p>
+</div>
+<div class="content-foo">
+<h4>Email</h4>
+<p>bernardo.bfsh@gmail.com</p>
+</div>
+<div class="content-foo">
+<h4>Localización</h4>
+<p>4 Calle Gabriel Celaya, 29002, Málaga</p>
+</div>
+</div>
+<h2 class="titulo-final">&copy; Milleu Design | Bernardo Suárez</h2>
+</footer>
+	
+</body>
+</html>
